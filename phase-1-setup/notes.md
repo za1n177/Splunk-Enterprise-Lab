@@ -1,13 +1,22 @@
-### Phase 1 – Splunk Enterprise Installation & Verification
+## Phase 1 – Splunk Enterprise Installation & Access
 
-- Installed Splunk Enterprise on Ubuntu Server (VM-based lab)
+### Objective
+Install and validate Splunk Enterprise on Ubuntu Server and enable secure web access from host machine.
+
+### Environment
+- Ubuntu Server 24.04 LTS (VirtualBox)
+- Splunk Enterprise 10.2
+- Network: Host-only (192.168.56.0/24) with port forwarding
+
+### Key Steps
 - Verified system resources and network interfaces
-- Downloaded Splunk directly via wget from Splunk official repository
-- Extracted Splunk to /opt and started service with license acceptance
-- Confirmed Splunk Web listening on TCP 8000
-- Configured UFW to allow SSH (22) and Splunk Web (8000)
-- Exposed Splunk Web via VirtualBox port forwarding for host access
-- Validated Splunk Web UI accessibility from Windows browser
+- Downloaded Splunk Enterprise via official Splunk repository
+- Extracted Splunk to /opt/splunk
+- Started Splunk and accepted license
+- Opened firewall port 8000 using UFW
+- Verified Splunk web service listening on TCP 8000
+- Accessed Splunk Web UI via port forwarding (127.0.0.1:8000)
+- Logged in as admin and validated dashboard access
 
-Outcome:
-Splunk Enterprise successfully deployed and accessible for further log ingestion and SIEM use cases.
+### Outcome
+Splunk Enterprise successfully installed, running, and accessible from host browser.
