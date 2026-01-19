@@ -1,18 +1,18 @@
-# Phase 1 – Splunk Enterprise Installation & Validation
+## Phase 1 – Splunk Pre-check & Download
 
-## Objective
-Install and validate Splunk Enterprise on Ubuntu Server as the foundation for security monitoring and log analysis.
+### Objective
+Prepare Ubuntu Server for Splunk Enterprise installation and validate system readiness.
 
-## Key Actions
-- Installed Splunk Enterprise on Ubuntu Server
-- Started Splunk service and accepted license
-- Accessed Splunk Web UI
-- Validated indexing and search functionality
+### Pre-checks Performed
+- Verified OS: Ubuntu 24.04 LTS
+- Verified CPU architecture: x86_64
+- Verified available disk space and memory
+- Confirmed internet connectivity and DNS resolution
 
-## Key Learnings
-- Splunk runs as a service under /opt/splunk
-- Web UI is accessible via port 8000
-- Internal logs (_internal index) confirm indexing health
+### Download Method
+Direct `wget` download from Splunk failed due to authentication requirements (expected behavior).
+Splunk Enterprise was manually downloaded via browser and securely transferred to the Ubuntu server using SCP.
 
-## Outcome
-Splunk Enterprise is fully operational and ready for external log ingestion (FortiGate, Linux, Windows).
+### Outcome
+- Splunk Enterprise installer successfully staged on Ubuntu server
+- System ready for Splunk installation (Phase 2)
