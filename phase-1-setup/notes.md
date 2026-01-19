@@ -1,23 +1,13 @@
-## Phase 1 – Splunk Enterprise Installation (Linux)
+### Phase 1 – Splunk Enterprise Installation & Verification
 
-### Objective
-Install Splunk Enterprise on Ubuntu Server using enterprise-standard methods.
+- Installed Splunk Enterprise on Ubuntu Server (VM-based lab)
+- Verified system resources and network interfaces
+- Downloaded Splunk directly via wget from Splunk official repository
+- Extracted Splunk to /opt and started service with license acceptance
+- Confirmed Splunk Web listening on TCP 8000
+- Configured UFW to allow SSH (22) and Splunk Web (8000)
+- Exposed Splunk Web via VirtualBox port forwarding for host access
+- Validated Splunk Web UI accessibility from Windows browser
 
-### Environment
-- OS: Ubuntu Server 24.04 LTS
-- Platform: VirtualBox
-- Role: Standalone Splunk Enterprise (future Indexer)
-
-### Key Actions
-- Verified system resources (CPU, memory, disk)
-- Confirmed network connectivity and DNS resolution
-- Downloaded Splunk Enterprise using wget
-- Validated downloaded installation packages
-
-### Notes
-- Initial attempts returned HTTP 404 due to incorrect version paths
-- Successfully retrieved latest Splunk Enterprise (TGZ) package
-- Chose TGZ installation to align with production deployments
-
-### Evidence
-See screenshots P1-01 to P1-04
+Outcome:
+Splunk Enterprise successfully deployed and accessible for further log ingestion and SIEM use cases.
