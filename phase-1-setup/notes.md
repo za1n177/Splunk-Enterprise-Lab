@@ -1,18 +1,23 @@
-## Phase 1 – Splunk Pre-check & Download
+## Phase 1 – Splunk Enterprise Installation (Linux)
 
 ### Objective
-Prepare Ubuntu Server for Splunk Enterprise installation and validate system readiness.
+Install Splunk Enterprise on Ubuntu Server using enterprise-standard methods.
 
-### Pre-checks Performed
-- Verified OS: Ubuntu 24.04 LTS
-- Verified CPU architecture: x86_64
-- Verified available disk space and memory
-- Confirmed internet connectivity and DNS resolution
+### Environment
+- OS: Ubuntu Server 24.04 LTS
+- Platform: VirtualBox
+- Role: Standalone Splunk Enterprise (future Indexer)
 
-### Download Method
-Direct `wget` download from Splunk failed due to authentication requirements (expected behavior).
-Splunk Enterprise was manually downloaded via browser and securely transferred to the Ubuntu server using SCP.
+### Key Actions
+- Verified system resources (CPU, memory, disk)
+- Confirmed network connectivity and DNS resolution
+- Downloaded Splunk Enterprise using wget
+- Validated downloaded installation packages
 
-### Outcome
-- Splunk Enterprise installer successfully staged on Ubuntu server
-- System ready for Splunk installation (Phase 2)
+### Notes
+- Initial attempts returned HTTP 404 due to incorrect version paths
+- Successfully retrieved latest Splunk Enterprise (TGZ) package
+- Chose TGZ installation to align with production deployments
+
+### Evidence
+See screenshots P1-01 to P1-04
